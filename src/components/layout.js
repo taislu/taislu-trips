@@ -37,6 +37,7 @@ const FadingHeader = posed.header({
 const Layout = ({ children, transitionStatus }) => (
   <ThemeProvider theme={theme}>
     <React.Fragment>
+      
       <FadingHeader pose={transitionStatus}>
         <Flex px={[3, 5]} py={4} >
           <Box >
@@ -60,6 +61,7 @@ const Layout = ({ children, transitionStatus }) => (
           </Box>
         </Flex>
       </FadingHeader>
+      
       <Box as="main" px={[3, 5]}>
         {children}
       </Box>

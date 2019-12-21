@@ -6,7 +6,9 @@ import styled from "styled-components";
 import AniLink from "gatsby-plugin-transition-link/AniLink";
 
 import { Description } from "../components/project-header";
-import Layout from "../components/layout";
+
+//import Layout from "../components/layout";
+import Layout from "../components/layout_1";
 
 import Slider from "../components/slider_2"
 
