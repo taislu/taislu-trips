@@ -8,7 +8,8 @@ import ProjectHeader from "../components/project-header";
 import ProjectContent from "../components/project-content";
 import NextProjectHeading from "../components/next-project-heading";
 
-const TRANSITION_LENGTH = 1.5;
+//const TRANSITION_LENGTH = 1.5;
+const TRANSITION_LENGTH = 2;
 
 const FadingContent = posed.div({
   exiting: { opacity: 0 }
@@ -60,10 +61,13 @@ const ProjectInner = ({ transitionStatus, project }) => {
 
   return (
     <Layout transitionStatus={transitionStatus}>
+
       <FadingContent pose={transitionStatus}>
         <ProjectHeader project={project} />
         <ProjectContent photos={project.photos} />
       </FadingContent>
+
+      {/** transition to next page */}
       <TransitionLink
         style={{
           textDecoration: "none",
@@ -73,12 +77,15 @@ const ProjectInner = ({ transitionStatus, project }) => {
         exit={exitTransition}
         entry={entryTransition}
       >
-        <FadingNextProjectHeading pose={transitionStatus}>
-          <NextProjectHeading />
-        </FadingNextProjectHeading>
+    
         <SlidingHeader pose={transitionStatus}>
           <ProjectHeader project={project.next} truncated={shouldTruncate} />
         </SlidingHeader>
+
+        <FadingNextProjectHeading pose={transitionStatus}>
+          <NextProjectHeading />
+        </FadingNextProjectHeading>
+
       </TransitionLink>
     </Layout>
   );

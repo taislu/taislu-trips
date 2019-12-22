@@ -9,6 +9,9 @@ const Grid = styled(Box)`
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   grid-gap: ${props => props.theme.space[4]}px;
+  @media only screen and (min-width: 768px){
+    grid-template-columns: repeat(2, 1fr);
+  }
 `;
 
 const ProjectContent = ({ photos }) => {
