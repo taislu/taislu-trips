@@ -55,7 +55,7 @@ const Layout = ({ children, transitionStatus }) => (
             <Text 
               fontFamily='Montserrat, sans-serif'
               color='tomato'>
-              Round-Robin & Linked-List Views
+              Trips Photos
             </Text>     
             <Link  href='/' >[HOME]</Link>
           </Box>

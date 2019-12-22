@@ -7,7 +7,7 @@ import AspectRatioBox from "./aspect-ratio-box";
 
 const Grid = styled(Box)`
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(1, 1fr);
   grid-gap: ${props => props.theme.space[4]}px;
 `;
 

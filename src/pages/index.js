@@ -30,11 +30,12 @@ const SlideContainer = styled.div`
   }
 `;
 
+// AniLink 4 predefined transitions: fade, swipe, cover, and paintDrip  
 const ProjectGridItem = ({ project }) => {
   return (
     <AniLink
       style={{ textDecoration: "none" }}
-      fade
+      swipe
       to={`/projects/${project.slug}`}
       duration={0.2}
     >
